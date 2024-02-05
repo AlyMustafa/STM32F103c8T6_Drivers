@@ -12,12 +12,12 @@ int main(void)
 {
 	
 uint16_t mycapture = 0;
-Timer_PWM_micro(GPIOA, GPIO_PIN_10, 	50000, 20000);
-Timer_Capture_micro(GPIOA, GPIO_PIN_11, 50000, RISING);
+Timer_PWM_milli(GPIOA, GPIO_PIN_10, 1000, 300);
+Timer_Capture_milli(GPIOA, GPIO_PIN_11, 1000, RISING);
 
 	  while(1)
 	{
-		mycapture = Timer_get_Capture_micro(GPIOA, GPIO_PIN_10);
+		mycapture = Timer_get_Capture_milli(GPIOA, GPIO_PIN_11);
 	}
 
 return 0;
