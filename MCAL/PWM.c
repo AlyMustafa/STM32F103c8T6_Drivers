@@ -317,7 +317,7 @@ void Timer_PWM_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint16_t 
  * Note			    - none
  *=================================================================
  */
-
+/*
 void Timer_Capture_micro(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8_t edge )
 {
 	TIM_t* tim = get_timer_mapping(GPIOx , pin);
@@ -363,6 +363,7 @@ void Timer_Capture_micro(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8
 	}
 	tim->CR1 |= (1<<0); //Kick Timer
 }
+*/
 /*
  *================================================================
  * @Fn				- Timer_Capture_milli
@@ -375,7 +376,7 @@ void Timer_Capture_micro(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8
  * Note			    - none
  *=================================================================
  */
-void Timer_Capture_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8_t edge )
+/*void Timer_Capture_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8_t edge )
 {
 	TIM_t* tim = get_timer_mapping(GPIOx , pin);
 	uint8_t channel = get_timer_channel(GPIOx , pin , capture);
@@ -420,7 +421,7 @@ void Timer_Capture_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8
 	}
 	tim->CR1 |= (1<<0); //Kick Timer
 }
-
+*/
 /*
  *================================================================
  * @Fn				- Timer_get_Capture_micro
@@ -431,7 +432,7 @@ void Timer_Capture_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint8
  * Note			    - none
  *=================================================================
  */
-uint16_t Timer_get_Capture_micro (GPIO_t* GPIOx , uint16_t pin )
+/*uint16_t Timer_get_Capture_micro (GPIO_t* GPIOx , uint16_t pin )
 {
 	TIM_t* tim = get_timer_mapping(GPIOx , pin);
 	uint8_t channel = get_timer_channel(GPIOx , pin , capture);
@@ -447,7 +448,7 @@ uint16_t Timer_get_Capture_micro (GPIO_t* GPIOx , uint16_t pin )
 	}
 	my_capture = my_capture * my_PSC/(72-1);  //convert into time
 	return my_capture;
-}
+}*/
 /*
  *================================================================
  * @Fn				- Timer_get_Capture_micro
@@ -458,9 +459,9 @@ uint16_t Timer_get_Capture_micro (GPIO_t* GPIOx , uint16_t pin )
  * Note			    - none
  *=================================================================
  */
-uint16_t Timer_get_Capture_milli (GPIO_t* GPIOx , uint16_t pin )
+/*uint16_t Timer_get_Capture_milli (GPIO_t* GPIOx , uint16_t pin )
 {
 	uint16_t my_capture = 0;
 	my_capture = Timer_get_Capture_micro(GPIOx , pin) /1000;
 	return my_capture;
-}
+}*/
