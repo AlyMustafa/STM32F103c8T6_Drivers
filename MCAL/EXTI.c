@@ -4,7 +4,6 @@
  *   Created on: Oct 7, 2023
  *      Author:Aly Mustafa
  */
-//#include "../../Stm32_F103C6_Drivers/inc/Stm32f103c6_GPIO_driver.h"
 #include "EXTI.h"
 #include"STM32F103x6.h"
 #include "GPIO.h"

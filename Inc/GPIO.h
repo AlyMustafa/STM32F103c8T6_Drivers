@@ -2,7 +2,7 @@
  * Stm32f103c6_GPIO_driver.h
  *
  *  Created on: Sep 15, 2023
- *      Author: Metro
+ *      Author: Ali Mustafa
  */
 
 #ifndef INC_STM32F103C6_GPIO_DRIVER_H_

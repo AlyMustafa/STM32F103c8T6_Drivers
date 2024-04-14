@@ -1,13 +1,11 @@
 /*
  * Stm32f103c6_GPIO_driver.c
- *
- *  Created on: Sep 15, 2023
- *      Author: Ali Mustafa
+ * Created on: Sep 15, 2023
+ * Author: Ali Mustafa
  */
 
 #include "TIM.h"
-//
-///*=========>  Enable/Disable NVIC  <=========*/
+/*=========>  Enable/Disable NVIC  <=========*/
 void Enable_NVIC_TIM(uint8_t timerType)
 {
 	TIM_t* tim;

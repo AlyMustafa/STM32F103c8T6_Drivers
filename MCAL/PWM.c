@@ -1,8 +1,7 @@
 /*
  * PWM.c
- *
- *  Created on: 4/12/2023
- *      Author: Aly Mustafa
+ * Created on: 4/12/2023
+ * Author: Aly Mustafa
  */
 
 #include "PWM.h"
