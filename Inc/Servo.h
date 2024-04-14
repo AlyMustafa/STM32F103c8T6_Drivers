@@ -1,8 +1,7 @@
 /*
- * PWM.h
- *
- *  Created on: 4/12/2023
- *      Author: Aly Mustafa
+ * Servo.h
+ * Created on: 4/12/2023
+ * Author: Aly Mustafa
  */
 
 #ifndef SERVO_H_
