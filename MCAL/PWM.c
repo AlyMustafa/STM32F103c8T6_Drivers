@@ -304,6 +304,53 @@ void Timer_PWM_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint16_t 
 	tim->CR1 |= (1<<0); //Kick Timer
 }
 
+
+
+
+void SPWM(GPIO_t* GPIOx , uint16_t pin , uint32_t arr_val , uint32_t Prescaler ,uint32_t compare_val, uint32_t clk )
+{
+	TIM_t* tim = get_timer_mapping(GPIOx , pin);
+	uint8_t channel = get_timer_channel(GPIOx , pin , compare);
+	tim->PSC = (Prescaler-1);
+	tim->ARR = (arr_val-1);
+	tim ->CNT = 0;
+	tim->BDTR |=0x8000;
+	switch (channel)
+	{
+	case 1 :
+	{
+		tim->CCMR1 |= 0x60;  				//110: PWM mode
+		tim->CCER |= (1<<0); 				//Capture/Compare 1 output enable
+		tim->CCR1 = compare_val;			//Set compare Value
+
+		break;
+	}
+	case 2 :
+	{
+		tim->CCMR1 |= 0x6000; 				//110: PWM mode
+		tim->CCER |= (1<<4);				//Capture/Compare 1 output enable
+		tim->CCR2 = compare_val;			//Set compare Value
+		break;
+	}
+	case 3 :
+	{
+		tim->CCMR2 |= 0x60;					//110: PWM mode
+		tim->CCER |= (1<<8);				//Capture/Compare 1 output enable
+		tim->CCR3 = compare_val;			//Set compare Value
+		break;
+	}
+	case 4 :
+	{
+		tim->CCMR2 |= 0x6000;				//110: PWM mode .
+		tim->CCER |= (1<<12);    			//Capture/Compare 4 output enable
+		tim->CCR4 = compare_val; 			//Set compare Value
+		break;
+	}
+	}
+	tim->CR1 |= (1<<0); //Kick Timer
+}
+
+
 /*
  *================================================================
  * @Fn				- Timer_Capture_micro
