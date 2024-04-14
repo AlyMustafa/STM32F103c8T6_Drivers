@@ -47,6 +47,7 @@ void Timer_compare_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint1
 //-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-           PWM          *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+void SPWM(GPIO_t* GPIOx , uint16_t pin , uint32_t arr_val , uint32_t Prescaler ,uint32_t compare_val, uint32_t clk );
 void Timer_PWM_micro(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint16_t compare_val );
 void Timer_PWM_milli(GPIO_t* GPIOx , uint16_t pin , uint16_t arr_val , uint16_t compare_val );
 //-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
